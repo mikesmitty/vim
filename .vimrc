@@ -18,6 +18,10 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
+" Enable folding functions et. al
+setlocal foldmethod=syntax
+autocmd FileType python setlocal foldmethod=indent
+
 " Enable special settings for puppet manifests
 autocmd FileType puppet setlocal shiftwidth=2 tabstop=2
 
