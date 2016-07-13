@@ -8,8 +8,8 @@ colorscheme buddy
 
 " Let there be SEARCH
 set incsearch " incremental search
-set ignorecase
-set smartcase " capital letters = case sensitive
+"set ignorecase
+"set smartcase " capital letters = case sensitive
 
 " Tab indentation
 set tabstop=4
