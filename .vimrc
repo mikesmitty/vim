@@ -23,6 +23,15 @@ setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
 set foldlevelstart=10
 
+" Go settings
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
 " Enable special settings for puppet manifests
 autocmd FileType puppet setlocal shiftwidth=2 tabstop=2
 
