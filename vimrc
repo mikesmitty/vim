@@ -46,3 +46,17 @@ map <F5> <Esc>:w<CR>:!%:p<CR>
 
 " pathogen settings
 execute pathogen#infect()
+
+" Disable YouCompleteMe
+let g:loaded_youcompleteme = 1
+
+" Track the engine.
+"Plugin 'SirVer/ultisnips'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
