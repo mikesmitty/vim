@@ -68,6 +68,6 @@ autocmd vimenter * NERDTree
 " Map ctrl+n to turn nerdtree on/off
 map <C-n> :NERDTreeToggle<CR>
 
- Close if nerdtree is the only thing open
+" Close if nerdtree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
