@@ -63,7 +63,7 @@ let g:loaded_youcompleteme = 1
 let g:UltiSnipsEditSplit="vertical"
 
 " Start nerdtree with vim
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " Map ctrl+n to turn nerdtree on/off
 map <C-n> :NERDTreeToggle<CR>
