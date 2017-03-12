@@ -31,6 +31,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " Enable special settings for puppet manifests
 autocmd FileType puppet setlocal shiftwidth=2 tabstop=2
