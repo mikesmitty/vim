@@ -11,6 +11,9 @@ set incsearch " incremental search
 "set ignorecase
 "set smartcase " capital letters = case sensitive
 
+" Set max open tabs
+set tabpagemax=25
+
 " Tab indentation
 set tabstop=4
 set softtabstop=0
