@@ -8,6 +8,7 @@ colorscheme buddy
 
 " Let there be SEARCH
 set incsearch " incremental search
+set noignorecase
 "set ignorecase
 "set smartcase " capital letters = case sensitive
 
@@ -36,8 +37,9 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
-" Enable special settings for puppet manifests
+" Enable special settings for puppet manifests and yaml files
 autocmd FileType puppet setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " Set default paste buffer to the system clipboard
 "set clipboard^=unnamed
