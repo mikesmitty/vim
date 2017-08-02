@@ -22,9 +22,8 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
-" Enable folding functions et. al
+" Enable default folding settings
 setlocal foldmethod=syntax
-autocmd FileType python setlocal foldmethod=indent
 set foldlevelstart=10
 
 " Go settings
@@ -37,9 +36,13 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
-" Enable special settings for puppet manifests and yaml files
+" Puppet and yaml settings
 autocmd FileType puppet setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
+" Python settings
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType python autocmd BufWrite <buffer> :Autoformat
 
 " Set default paste buffer to the system clipboard
 "set clipboard^=unnamed
@@ -49,9 +52,6 @@ set wildmode=longest,list,full
 
 " Set up save-and-run hotkey
 map <F5> <Esc>:w<CR>:!%:p<CR>
-
-" pathogen settings
-execute pathogen#infect()
 
 " Disable YouCompleteMe
 let g:loaded_youcompleteme = 1
@@ -76,3 +76,5 @@ map <C-n> :NERDTreeToggle<CR>
 " Close if nerdtree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" pathogen settings
+execute pathogen#infect()
